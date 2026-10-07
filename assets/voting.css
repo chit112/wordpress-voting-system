@@ -1,0 +1,162 @@
+.civ-voting,
+.civ-results {
+    --civ-color: #184b3b;
+    --civ-border: #d5ded9;
+    box-sizing: border-box;
+    max-width: 52rem;
+    margin: 1.5rem auto;
+    padding: clamp(1rem, 4vw, 2rem);
+    border: 1px solid var(--civ-border);
+    border-radius: 0.5rem;
+    background: #fff;
+    color: #18221e;
+}
+
+.civ-voting *,
+.civ-results * {
+    box-sizing: border-box;
+}
+
+.civ-title,
+.civ-results h2 {
+    margin-top: 0;
+}
+
+.civ-question {
+    font-size: 1.15rem;
+    line-height: 1.5;
+}
+
+.civ-pair {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin: 1.25rem 0;
+}
+
+.civ-button {
+    min-height: 2.75rem;
+    padding: 0.7rem 1rem;
+    border: 2px solid var(--civ-color);
+    border-radius: 0.3rem;
+    background: var(--civ-color);
+    color: #fff;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.civ-button:hover,
+.civ-button:focus-visible {
+    background: #fff;
+    color: var(--civ-color);
+}
+
+.civ-button:focus-visible,
+.civ-submit summary:focus-visible,
+.civ-submit textarea:focus-visible {
+    outline: 3px solid #f2b134;
+    outline-offset: 3px;
+}
+
+.civ-idea {
+    min-height: 7rem;
+    text-align: left;
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
+
+.civ-controls {
+    text-align: center;
+}
+
+.civ-controls[hidden] {
+    display: none;
+}
+
+.civ-skip {
+    background: #fff;
+    color: var(--civ-color);
+}
+
+.civ-submit {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--civ-border);
+}
+
+.civ-submit summary {
+    color: var(--civ-color);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.civ-submit label,
+.civ-submit textarea {
+    display: block;
+    width: 100%;
+}
+
+.civ-submit label {
+    margin: 1rem 0;
+}
+
+.civ-submit textarea {
+    min-height: 6rem;
+    margin-top: 0.35rem;
+    padding: 0.6rem;
+    border: 1px solid #68766f;
+    border-radius: 0.25rem;
+    font: inherit;
+}
+
+.civ-status {
+    min-height: 1.5em;
+}
+
+.civ-footnote,
+.civ-low-data,
+.civ-historical-source {
+    display: block;
+    color: #4d5b54;
+    font-size: 0.9rem;
+}
+
+.civ-ranking {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+}
+
+.civ-ranking-item {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.35rem 1rem;
+    padding: 0.85rem 0;
+    border-bottom: 1px solid var(--civ-border);
+}
+
+.civ-ranking-score {
+    font-variant-numeric: tabular-nums;
+    font-weight: 700;
+}
+
+.civ-ranking-count,
+.civ-low-data,
+.civ-historical-source {
+    grid-column: 1 / -1;
+}
+
+.civ-historical-heading {
+    margin-top: 2rem;
+}
+
+.civ-standalone {
+    width: min(100% - 2rem, 70rem);
+    margin: 2rem auto;
+}
+
+@media (max-width: 40rem) {
+    .civ-pair {
+        grid-template-columns: 1fr;
+    }
+}
